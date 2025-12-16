@@ -18,7 +18,6 @@ export default function App() {
           </div>
         </header>
         <main className="app-main">
-        console.log(import.meta.env.VITE_API_BASE_URL);
 
           <Router>
             <Routes>
