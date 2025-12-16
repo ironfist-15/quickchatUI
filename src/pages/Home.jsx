@@ -15,7 +15,7 @@ export default function Home() {
     setLoading(true);
     setError("");
 
-    fetch(`/api/chat/${encodeURIComponent(userId)}/home`,
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/api/chat/${encodeURIComponent(userId)}/home`,
     {
       method: "GET",
       headers: {
@@ -61,7 +61,7 @@ export default function Home() {
 
       try {
         const res = await fetch(
-          `/api/chat/${encodeURIComponent(userId)}/search?username=${encodeURIComponent(
+          `${import.meta.env.VITE_API_BASE_URL}/api/chat/${encodeURIComponent(userId)}/search?username=${encodeURIComponent(
             search.trim()
           )
         }`

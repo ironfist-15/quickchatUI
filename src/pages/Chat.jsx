@@ -18,7 +18,7 @@ export default function Chat() {
     setError("");
 
     // Fetch chat history
-    fetch(`/api/chat/${encodeURIComponent(id1)}/history/${encodeURIComponent(id2)}`, {
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/api/chat/${encodeURIComponent(id1)}/history/${encodeURIComponent(id2)}`, {
       credentials: "include",
     })
       .then((res) => {
@@ -33,7 +33,7 @@ export default function Chat() {
       });
 
     // Open WebSocket
-    const socket = new WebSocket(`wss://backendchat-56hv.onrender.com/ws/chat?userId=${id1}`);
+    const socket = new WebSocket(`${import.meta.env.VITE_WS_BASE_URL}/ws/chat?userId=${id1}`);
 
     socket.onopen = () => {
       if (!cancelled) {
