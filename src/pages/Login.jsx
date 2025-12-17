@@ -70,6 +70,7 @@ export default function Login() {
             <p className="auth-subtitle">
               Log in to see your recent chats and pick up where you left off.
             </p>
+            <p>use username:alice && password:password123 for easy guide to understand functionality or create account </p>
           </div>
 
           <form className="form" onSubmit={handleSubmit}>
